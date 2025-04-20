@@ -96,6 +96,15 @@ services:
     depends_on:
       - kafka
 
+  fastapi:
+    build: ./fastapi-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+
 volumes:
   postgres-db-volume:
   airflow-logs:

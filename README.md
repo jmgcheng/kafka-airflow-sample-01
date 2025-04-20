@@ -14,4 +14,10 @@ docker compose down
 
 #
 
+http://localhost:8080/
+http://localhost:9000/
+http://localhost:8000/docs
+
+#
+
 docker compose down --volumes --remove-orphans
